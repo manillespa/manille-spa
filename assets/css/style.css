@@ -1,0 +1,356 @@
+/* -----------------------------------
+   GLOBAL
+----------------------------------- */
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+/* -----------------------------------
+   HERO (Home)
+----------------------------------- */
+.hero {
+  background: url('../images/mbr-1920x1097.png') center/cover no-repeat;
+  padding: 150px 0;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  max-width: 600px;
+  margin-left: 2rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 5rem);
+}
+
+/* -----------------------------------
+   HERO 
+----------------------------------- */
+.hero-contact {
+  background: url('../images/mbr-1-1920x1097.jpg') center/cover no-repeat;
+  padding: 150px 0;
+  position: relative;
+  color: white;
+}
+
+.hero-contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-contact .content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Section background colors */
+.bg-luxury {
+  background-color: #d8cab8; /*  */
+  color: #7e3f9b; /* dark text for readability */
+}
+
+.bg-luxury h2,
+.bg-luxury h3,
+.bg-luxury h1 {
+  color: #4b2e5e; 
+}
+
+/* Spacing */
+section {
+  padding: 5rem 0;
+}
+
+/* Left-align text in sections */
+.text-left-section {
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Accent color for headings and borders */
+.accent-mauve {
+  color: #4b2e5e;
+}
+
+.accent-border-mauve {
+  border-color: #d9c3dc;
+}
+
+/* Cards & boxes */
+.card, .accordion-item {
+  border: 1px solid #d9c3dc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+/* Remove default blue outline on accordion buttons */
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(75, 46, 94, 0.25); /* mauve glow */
+  border-color: #4b2e5e; /* optional: mauve border when focused */
+  outline: none; /* remove the default blue */
+}
+
+/* Optional: change background when active/open */
+.accordion-button:not(.collapsed) {
+  background-color: rgba(75, 46, 94, 0.05); /* light mauve */
+  color: #4b2e5e;
+}
+
+/* Gallery images hover effect */
+.gallery-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Testimonials text */
+.testimonial-text {
+  font-style: italic;
+}
+.testimonial-author {
+  color: #4b2e5e;
+  font-weight: bold;
+}
+
+/* Mauve Button */
+.btn-mauve {
+  background: linear-gradient(135deg, #7e3f9b, #9b6f91); /* Elegant gradient */
+  color: white;
+  padding: 1.2rem 2.4rem;
+  border-radius: 30px; /* Soft rounded corners */
+  font-size: 1.1rem;
+  border: none;
+  text-transform: uppercase; /* Capitalize text for elegance */
+  letter-spacing: 1.5px;
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-mauve:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  background: linear-gradient(135deg, #9b6f91, #7e3f9b); /* Reverse gradient on hover */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.btn-mauve:focus {
+  background-color: #7a1fd0; /* Slightly darker on hover/focus */
+  color: #fff;
+  text-decoration: none;
+  outline: 3px solid #9b6f91;
+}
+
+.btn-mauve:active {
+  transform: scale(0.98); /* Slight shrink on click */
+  background-color: #6e1bb8; /* Darken on click */
+}
+
+.connect-icons i {
+  font-size: 1.5rem;
+  color: #9b6f91; /* Mauve color */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.connect-icons i:hover {
+  transform: scale(1.1);  /* Slightly enlarge on hover */
+  color: #7e3f9b;  /* Darker mauve on hover */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Microinteraction: Scale on hover */
+.micro-interaction {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.micro-interaction:hover {
+  transform: scale(1.1); /* Slightly scale the element */
+  color: #7e3f9b; /* Change color on hover (adjust for link color) */
+}
+
+.navbar {
+    background-color: white !important;  
+}
+
+.navbar a {
+  font-size: 1rem;
+  color: #9b6f91;  /* Mauve color */
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+  transform: scale(1.05);  /* Slight enlargement */
+  color: #7e3f9b;  /* Darker mauve on hover */
+}
+
+.navbar a.btn-mauve {
+    color: white !important;  /* Force white text color for "Book Now" */
+}
+
+.navbar a.btn-mauve:hover {
+    color: white !important;  /* Keep text white on hover */
+}
+
+/* Ensure the icon colors in navbar are unaffected */
+.navbar .nav-item i {
+    font-size: 1.2rem;
+    color: #9b59b6;  /* Mauve color for icons */
+    transition: color 0.3s;
+}
+
+footer a {
+  font-size: 1rem;
+  color: #9b6f91;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer a:hover {
+  transform: scale(1.05);  /* Slight enlargement */
+  color: #7e3f9b;  /* Darker mauve on hover */
+}
+
+
+/* -----------------------------------
+   SERVICES SECTION 
+----------------------------------- */
+/* Center text only in hero section on services.html */
+.hero-services {
+  display: flex;                     /* Enable flexbox */
+  justify-content: center;           /* Center horizontally */
+  align-items: center;               /* Center vertically */
+  text-align: center;                /* Center the text inside the content */
+  color: white;                      /* Ensure the text color remains white */
+}
+
+.hero-services .hero-content {
+  z-index: 2;
+  max-width: 800px;                  /* Optional: Set a max width for the content */
+}
+
+.hero-services h1 {
+  font-size: clamp(2rem, 5vw, 5rem); /* Adjust font size responsively */
+}
+
+/* New section container for Services */
+.services {
+  background-color: #d8cab8; 
+  padding: 60px 0;
+}
+
+.services .section-heading {
+  color: #4b2e5e; /* Mauve */
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Card Layout for Signature Services */
+.services .card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff; /* white background for cards */
+}
+
+.services .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.services .card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.services .card-body {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.services .card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #5b2f7a; /* Mauve */
+}
+
+.services .card-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Service Items List (Regular Service Items) */
+.services .service-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.services .service-item:nth-child(odd) {
+  background-color: #f8f8f8; /* Light grey for odd items */
+}
+
+.services .service-item:hover {
+  background-color: #f1e2f3; /* Mauve hover */
+  transform: translateY(-3px);
+}
+
+.services .service-item h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #5b2f7a; /* Mauve */
+  margin-bottom: 0.5rem;
+}
+
+.services .service-item p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Buttons (optional) */
+.services .btn-mauve {
+  background-color: linear-gradient(135deg, #7e3f9b, #9b6f91); 
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.services .btn-mauve:hover {
+  background-color: #7a1fd0;
+}
+
+.services .btn-mauve:focus {
+  outline: none;
+}
+
+
+/* -----------------------------------
+   FOOTER
+----------------------------------- */
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
