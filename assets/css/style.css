@@ -30,6 +30,13 @@ body {
   margin-left: 2rem;
 }
 
+.hero-content-center {
+  text-align: center !important;
+  margin: 0 auto !important;
+  max-width: 800px;
+}
+
+
 .hero-content h1 {
   font-size: clamp(2rem, 5vw, 5rem);
 }
@@ -69,8 +76,26 @@ body {
 }
 
 /* Spacing */
+:root {
+  --space-1: 1rem;
+  --space-2: 2rem;
+  --space-3: 3rem;
+  --space-4: 4rem;
+  --space-5: 5rem;
+}
+
 section {
-  padding: 5rem 0;
+  margin-bottom: 2rem;
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-5);
+}
+section h1,
+section h2,
+section h3 {
+  margin-bottom: var(--space-2);
+}
+section img {
+  margin-bottom: 1.5rem;
 }
 
 /* Left-align text in sections */
@@ -90,11 +115,16 @@ section {
 }
 
 /* Cards & boxes */
-.card, .accordion-item {
+.card {
+  padding: 2rem;
+  margin-bottom: var(--space-2);
+}
+
+.accordion-item {
   border: 1px solid #d9c3dc;
   border-radius: 8px;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-2);
 }
 /* Remove default blue outline on accordion buttons */
 .accordion-button:focus {
@@ -341,6 +371,62 @@ footer a:hover {
 
 .services .btn-mauve:focus {
   outline: none;
+}
+
+/* -----------------------------
+   SERVICES CARDS MOBILE ALIGNMENT
+----------------------------- */
+@media (max-width: 767px) {
+  .services .row.g-4 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .services .col-md-4 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .services .card-body {
+    padding-left: 1rem;  /* smaller padding for mobile */
+    padding-right: 1rem;
+  }
+  
+  .services .card, .services .card-body {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 1rem !important;  /* consistent padding inside the card */
+    padding-right: 1rem !important;
+  }
+}
+
+/* -----------------------------------
+   CONTACT
+----------------------------------- */
+.contact-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-icon {
+  font-size: 1.6rem;
+  color: #4b2e5e; 
+  margin-top: 0.3rem; /* Align icon with heading */
+}
+
+.contact-title {
+  margin: 0;
+  font-weight: 700;
+  color: #4b2e5e;
+}
+
+.contact-link {
+  color: #4b2e5e;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: #7e3f9b;
 }
 
 
